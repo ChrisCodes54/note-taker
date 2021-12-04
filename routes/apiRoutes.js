@@ -24,7 +24,7 @@ router.delete("/notes/:id", (req,res) => {
         return (note.id != req.params.id) 
     })
     fs.writeFileSync(path.join(__dirname,"../db/db.json"),JSON.stringify(remainingNotes))
-    res.send(`Note Deleted!`)
+    //res.send(`Note Deleted!`)
 
     const getNotes = () => {
         router.get('/notes', (req,res) => {
@@ -32,6 +32,8 @@ router.delete("/notes/:id", (req,res) => {
         })
     }
     getNotes()
+
+    res.send(`Note Deleted!`)
 })
 
 module.exports = router;
