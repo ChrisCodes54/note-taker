@@ -6,9 +6,12 @@ router.get('/', (req, res) =>
     res.sendFile(path.join(__dirname, '../index.html'))
 );
 
-router.get('/notes', (req, res) =>
+router.get('/notes', (req, res) => {
+    console.log(__dirname)
     res.sendFile(path.join(__dirname, '../public/notes.html'))
+}
 );
+
 
 
 
